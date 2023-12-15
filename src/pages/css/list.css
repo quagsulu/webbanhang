@@ -1,0 +1,27 @@
+button{
+    padding: 5px 10px;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
+.xoa{
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+}
+.sua{
+    border: 1px solid greenyellow;
+
+    background-color: greenyellow;
+    color: white;
+    font-size: 18px;
+}
+.them{
+    background-color: rgb(245, 192, 0);
+    color: white;
+    border: 1px solid rgb(245, 192, 0);
+    font-size: 18px;
+}
+.them:hover{
+    background-color: black;
+}

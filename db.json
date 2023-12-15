@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": 3,
+      "name": "Món Ăn Số 3",
+      "price": 560000,
+      "img": "https://i.imgur.com/m2rxLgH.png",
+      "desc": "Good"
+    },
+    {
+      "id": 4,
+      "name": "Món Ăn Số 4",
+      "price": 500000,
+      "img": "https://i.imgur.com/m2rxLgH.png",
+      "desc": "Good"
+    },
+    {
+      "id": 5,
+      "name": "Món Ăn Số 5",
+      "price": 500000,
+      "img": "https://i.imgur.com/m2rxLgH.png",
+      "desc": "Good"
+    },
+    {
+      "id": 6,
+      "name": "Món Ăn Số 6",
+      "price": 500000,
+      "img": "https://i.imgur.com/m2rxLgH.png",
+      "desc": "Good"
+    },
+    {
+      "id": 7,
+      "name": "Món Ăn Số 7",
+      "price": 500000,
+      "img": "https://i.imgur.com/m2rxLgH.png",
+      "desc": "Good"
+    },
+    {
+      "id": 7,
+      "name": "Món Ăn Số 7",
+      "price": 500000,
+      "img": "https://i.imgur.com/m2rxLgH.png",
+      "desc": "Good"
+    },
+    {
+      "name": "mon an 1 ",
+      "price": "111111111",
+      "img": "https://i.imgur.com/LBo0keI.png",
+      "desc": "awn ngon lamw",
+      "id": 9
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Món Ăn loại 1"
+    },
+    {
+      "id": 2,
+      "name": "Món Ăn loại 2"
+    },
+    {
+      "id": 3,
+      "name": "Món Ăn loại 3"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "quang",
+      "password": "12"
+    },
+    {
+      "id": 1,
+      "email": "quang",
+      "password": "12"
+    },
+    {
+      "id": 1,
+      "email": "quang",
+      "password": "12"
+    },
+    {
+      "email": "aaaaa@gmail.com",
+      "password": "$2a$10$cUuwbsiEWEp9i8M0zW.Rne.SzwFjZv.NkI01rmhBxUkqOS/mjIoeO",
+      "id": 2
+    },
+    {
+      "email": "saghromensikn@hotmail.com",
+      "password": "$2a$10$Doc9cN5NsqLhiwedCCUsl.D2JPoOHueuviSXvBHptBS3mw9ySJFVa",
+      "id": 3
+    },
+    {
+      "email": "quagsulu1911@gmail.com",
+      "password": "$2a$10$yf/wv7F5S2yWuhdUrUnRLO80FvR18cTMj4jZtpN.p57YGfSTtaBj6",
+      "id": 4
+    },
+    {
+      "email": "quagsulu191123@gmail.com",
+      "password": "$2a$10$2a73rRzgPgaEli.3hTOFiuevX1RmI4Qb5gOeMtz7CYWdypjk7XJTy",
+      "id": 5
+    }
+  ]
+}
