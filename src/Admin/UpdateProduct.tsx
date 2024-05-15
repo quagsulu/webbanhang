@@ -3,7 +3,7 @@ import React, { useState, useContext } from 'react'
 import { useMutation, useQuery } from 'react-query';
 import { getDetailProduct, updateProduct } from '../api/Product';
 import { Navigate, useParams } from 'react-router-dom';
-import { IProduct } from '../interface/User';
+// import { IProduct } from '../interface/User';
 import { toast } from 'react-toastify'
 // import { Link, useNavigate } from 'react-router-dom'
 

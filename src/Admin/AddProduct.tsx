@@ -1,8 +1,8 @@
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useState } from 'react'
 import { useMutation } from 'react-query';
 import { CreateProduct } from '../api/Product';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 
 const AddProduct = () => {
 
