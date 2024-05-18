@@ -13,6 +13,10 @@ import BaseLayout from './Layout/Base'
 import AdminLayout from './Layout/Admin'
 import Signin from './Components/Auth/SignIn'
 import Signup from './Components/Auth/SignUp'
+import ProfilePage from './pages/ProfilePage'
+import CartPage from './pages/Cart'
+import BillPage from './pages/Bill'
+import PurchaseHistory from './pages/PurchaseHistory'
 
 function App() {
 
@@ -21,7 +25,12 @@ function App() {
       <Routes>
         <Route path='/' element={<BaseLayout />}>
           <Route path='' element={<Home />} />
+          <Route path='/cart' element={<CartPage />} />
+          <Route path='/p' element={<PurchaseHistory />} />
+          <Route path='/bill' element={<BillPage />} />
+          <Route path='/profile' element={<ProfilePage />} />
           <Route path='product' element={<ProductPage />} />
+          <Route path='product/detail' element={<ProductDetail />} />
           <Route path='products/detail/:id' element={<ProductDetail />} />
           <Route path='signup' element={< Signup/>} />
           <Route path='signin' element={< Signin/>} />

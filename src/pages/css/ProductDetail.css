@@ -1,0 +1,96 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.food-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.food-info {
+    flex: 1;
+}
+
+.food-name {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.description {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.price {
+    font-weight: bold;
+    color: #FF6F61;
+    margin-bottom: 20px;
+}
+
+.order-button {
+    padding: 12px 24px;
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #E8483B;
+}
+
+.food-image-container {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.food-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.related-foods-title {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.related-foods {
+    display: flex;
+    justify-content: space-between;
+}
+
+.related-food {
+    flex-basis: calc(33.333% - 15px);
+    text-align: center;
+}
+
+.related-food-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.related-food-name {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 18px;
+}
+
+.related-food-price {
+    font-weight: bold;
+    color: #FF6F61;
+    font-size: 16px;
+}

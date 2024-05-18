@@ -1,100 +1,63 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 #wp-products {
-    padding-top:40px;
-    padding-left:134px;
-    padding-right:134px;
-    display: flex;
+    @apply py-10 px-14 flex;
 }
 
 #wp-products h2 {
-    text-align: center;
-    margin-bottom: 76px;
-    font-size:32px;
-    color:#626a67;
+    @apply text-center mb-20 text-4xl text-gray-600;
 }
 
-
 #list-products {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    @apply flex justify-around items-center flex-wrap;
 }
 
 #list-products .item {
-    padding: 5px;
-
-    width: 290px;
-    height: 374px;
-    background:#362f2f;
-    border-radius: 10px;
-    margin-bottom: 50px;
+    @apply p-5 w-72 h-96 bg-gray-800 rounded-lg mb-20;
 }
 
 #list-products .item img {
-    display: block;
-    margin:0px auto;
-    margin-top:17px;
+    @apply block mx-auto mt-4;
 }
 
 #list-products .item .stars {
-
-    display: flex;
-    margin:0px auto;
-    width: 50%;
+    @apply flex justify-center mt-4;
 }
 
 #list-products .item .name {
-    text-align: center;
-    color:#fff;
-    font-weight: bold;
-    margin-top:21px;
+    @apply text-white font-bold text-lg mt-6;
 }
 
 #list-products .item .desc {
-    text-align: center;
-    color:#626a67;
+    @apply text-gray-600 text-center;
 }
 
 #list-products .item .price {
-    text-align: center;
-    color:#f42424;
-    font-weight: bold;
-    margin-top:20px;
+    @apply text-red-500 font-bold text-center mt-4;
 }
-.product-page{
-    margin-top: 50px;
+
+.product-page {
+    @apply mt-20;
 }
-.product-page h2{
-    text-align: center;
+
+.product-page h2 {
+    @apply text-center text-4xl font-bold text-gray-600;
 }
+
 .search-box {
-    text-align: center;
+    @apply text-center;
 }
 
 .search-box input {
-    padding: 5px 10px;
-    height: 25px;
-    width: 400px;
-    border: 2px solid rgb(28, 205, 28);
-    border-radius: 20px;
-    font-size: 16px;
+    @apply px-4 py-2 border-2 border-green-500 rounded-full text-lg focus:outline-none;
 }
- 
-.search-box button{
-    margin-left: 10px;
-    /* padding: 5px 10px; */
-    height: 40px;
-    width: 100px;
-    border-radius: 20px;
-    border: 2px solid rgb(28, 205, 28);
-    background-color: rgb(28, 205, 28);
-    color: white;
-    font-size: 18px;
 
+.search-box button {
+    @apply ml-4 px-6 py-2 rounded-full bg-green-500 text-white font-bold text-lg transition duration-300 ease-in-out;
 }
-.search-box button:hover{
-    color: yellow;
+
+.search-box button:hover {
+    @apply bg-yellow-500;
 }
