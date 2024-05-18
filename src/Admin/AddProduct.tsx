@@ -15,7 +15,7 @@ const AddProduct = () => {
       alert("Thêm sản phẩm thành công")
     },
     onError() {
-      alert("error")
+      alert("errosr")
     }
   })
 
