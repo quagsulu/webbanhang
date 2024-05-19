@@ -47,7 +47,7 @@ const Home = () => {
                 <div id="list-products" >
                 {data?.map((p:any, index :number) =>(
 
-                                <div className="item">
+                                <div className="item" key={index}>
                                     <img src={p.img} alt="" />
 
                                     <div className="stars">

@@ -11,3 +11,7 @@ export interface IProduct{
     price:number,
     desc : string,
 }
+export interface Category{
+    id? : number | string,
+    name: string,
+}

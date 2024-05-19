@@ -1,4 +1,5 @@
-import { IProduct } from "../interface/User"
+// import { IProduct } from "../interface/Type"
+import { IProduct } from "../interface/Type"
 import Instance from "./Instance"
 
 export const getAllProduct = () =>{

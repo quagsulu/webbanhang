@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { useMutation } from 'react-query'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { login } from '../../api/User'
 import { toast } from 'react-toastify'
 import '../../pages/css/auth.css'

@@ -2,8 +2,10 @@ import React, { createContext, useEffect, useState } from 'react'
 import {useMutation,useQueryClient,useQuery} from 'react-query'
 import { toast } from 'react-toastify'
 import { deleteProduct, getAllProduct } from '../api/Product'
-import { IProduct, User } from '../interface/User'
+// import { IProduct, User } from '../interface/User'
 import { deleteUser, getAllUser, getUserDetail } from '../api/User'
+import { getAllCategory, deleteCategory } from '../api/Category'
+import { Category, IProduct, User } from '../interface/Type'
 
 export const ProductShopContext = createContext({} as any)
 
@@ -25,7 +27,20 @@ const ProductContext = ({children} : {children : React.ReactNode}) => {
             }
         }
     })
-
+    const {data :category , isLoading : isLoadingcate, isError : isErrorcate} = useQuery({
+        queryKey: ['CATEGORY'],
+        queryFn: async() =>{
+            try {
+                const {data} = await getAllCategory()
+                console.log("data",data);
+                return data as Category[]
+                
+            } catch (error) {
+                console.error('Error fetching products:', error);
+                throw error;
+            }
+        }
+    })
     const {data :user} = useQuery({
         queryKey: ['USERS'],
         queryFn: async() =>{
@@ -53,6 +68,15 @@ const ProductContext = ({children} : {children : React.ReactNode}) => {
     })
 
 
+    const deleteCate = useMutation({
+        mutationFn : (_id:any) => deleteCategory(_id),
+        onSuccess() {
+            alert('CATEGORY deleted successfully');
+            queryClient.invalidateQueries({
+                queryKey:['CATEGORY']
+            })
+        }
+    })
     const deleteprd = useMutation({
         mutationFn : (_id:any) => deleteProduct(_id),
         onSuccess() {
@@ -64,7 +88,12 @@ const ProductContext = ({children} : {children : React.ReactNode}) => {
     })
 
 
-    const ContextValue = {products, isError,isLoading, deleteprd, user,deleteuser}
+    const ContextValue = {
+        products,category,user,
+         isError,isErrorcate,
+         isLoading,isLoadingcate,
+         deleteprd,deleteuser ,deleteCate
+        }
   return (
     <ProductShopContext.Provider value={ContextValue}>
         {children}

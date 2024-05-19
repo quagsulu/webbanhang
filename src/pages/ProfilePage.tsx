@@ -2,6 +2,8 @@ import React from 'react';
 // import './Profile.css'; // Import file CSS cho styling
 import './css/Profile.css'
 function ProfilePage() {
+
+
   return (
     <div className="container">
       <div className="profile-card">

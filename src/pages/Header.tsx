@@ -1,22 +1,16 @@
-import React, { useContext, useEffect, useState } from 'react'
-import logo from '../Components/Assets/logo.png'
-import { Link } from 'react-router-dom'
-import { IoCartOutline } from "react-icons/io5";
-import { RiAccountPinCircleFill } from "react-icons/ri";
-import jwt, { VerifyErrors } from "jsonwebtoken"
-import {jwtDecode} from 'jwt-decode';
-import { ProductShopContext } from '../Context/Context';
-import { useMutation } from 'react-query';
-import { getUserDetail } from '../api/User';
-import { IProduct } from '../interface/User';
-import { VscSignOut } from "react-icons/vsc";
+// import React, { useContext, useEffect, useState } from 'react'
+// import logo from '../Components/Assets/logo.png'
+// import { Link } from 'react-router-dom'
+// import { IoCartOutline } from "react-icons/io5";
+// import { RiAccountPinCircleFill } from "react-icons/ri";
+// import jwt, { VerifyErrors } from "jsonwebtoken"
+// import {jwtDecode} from 'jwt-decode';
+// import { ProductShopContext } from '../Context/Context';
+// import { useMutation } from 'react-query';
+// import { getUserDetail } from '../api/User';
+// // import { IProduct } from '../interface/User';
+// import { VscSignOut } from "react-icons/vsc";
 
-interface UserDetailsResponse {
-    response: {
-      name: string;
-      // Other properties...
-    };
-  }
 const Header = () => {
    
     // const token = localStorage.getItem('AccessToken');
@@ -74,7 +68,6 @@ const Header = () => {
     <div id="actions">
         <div className="item">
             <a href="/signin">
-
                 <img src="https://i.imgur.com/w1wKLvZ.png" alt="Sign In" />
             </a>
         </div>

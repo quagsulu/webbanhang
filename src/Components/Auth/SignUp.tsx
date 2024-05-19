@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { useMutation } from 'react-query'
 import { Link, useNavigate } from 'react-router-dom'
 import { register } from '../../api/User'
-import { User } from '../../interface/User'
+// import { User } from '../../interface/User'
 import { toast } from 'react-toastify'
+import { User } from '../../interface/Type'
 const Signup = () => {
     const navigate = useNavigate()
     const [inputValue, setInputValue] = useState({})
@@ -60,8 +61,6 @@ const Signup = () => {
                     <a href="/signin">Đăng nhập</a>
                 </p>
             </form>
-
-  
         </>
     )
 }
