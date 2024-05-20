@@ -52,7 +52,6 @@ const Home = () => {
                                     <Link to={`/product/detail/${p._id}`}>
 
                                     <img className="imgprd" src={p.image} alt="" />
-                                    </Link>
 
                                     <div className="stars">
                                         <span>
@@ -76,6 +75,7 @@ const Home = () => {
                                     <div className="name" > {p.name} </div>
                                     {/* <div className="desc">{p.desc}</div> */}
                                     <div className="price">{p.price} VNĐ</div>
+                                    </Link>
                                 </div>
 
 ))}

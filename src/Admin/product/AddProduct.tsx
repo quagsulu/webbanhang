@@ -44,14 +44,6 @@ const AddProduct = () => {
       desc: '',
       categoryId: [],
     },
-    // validationSchema: Joi.object({
-    //   name: Joi.string().max(50).required(),
-    //   price: Joi.number().min(0).required(),
-    //   img: Joi.required(),
-    //   desc: Joi.string().min(1).required(),
-    //   // categoryId: Joi.string().min(1).required(),
-    //   categoryId: Joi.array().items(Joi.string().min(1)).required(),
-    // }),
     validate:(values) => {
       const errors: Partial<any> = {}
       if (!values.name) {
@@ -96,62 +88,6 @@ const AddProduct = () => {
       setFiles(filesArray)
     }
   }
-  // select style
-  const colourOptions = datacate?.map((cate: any) => ({
-    value: cate._id,
-    label: cate.name
-  }))
-  const handleSelectChange = (selectedOptions: any) => {
-    const selectedValues = selectedOptions.map((option: any) => option.value)
-    handleChange({
-      target: { name: 'categoryId', value: selectedValues }
-    })
-  }
-
-  const selectedOptions = colourOptions?.filter((option: any) =>
-    values.categoryId?.includes(option.value)
-  )
-  // select style
-  const dropdownStyles = {
-    control: (provided: any) => ({
-      ...provided,
-      borderRadius: '8px',
-      borderColor: '#e2e8f0',
-      boxShadow: 'none',
-      '&:hover': {
-        borderColor: '#cbd5e0'
-      },
-      '&:focus': {
-        borderColor: '#63b3ed',
-        boxShadow: '0 0 0 2px rgba(99, 179, 237, 0.2)'
-      }
-    }),
-    option: (provided: any, state: any) => ({
-      ...provided,
-      backgroundColor: state.isSelected ? '#edf2f7' : 'white',
-      color: state.isSelected ? '#2d3748' : '#4a5568',
-      '&:hover': {
-        backgroundColor: state.isSelected ? '#edf2f7' : '#f7fafc',
-        color: state.isSelected ? '#2d3748' : '#4a5568'
-      }
-    }),
-    multiValue: (provided: any) => ({
-      ...provided,
-      backgroundColor: '#e2e8f0',
-      borderRadius: '9999px'
-    }),
-    multiValueLabel: (provided: any) => ({
-      ...provided,
-      color: '#2d3748'
-    }),
-    multiValueRemove: (provided: any) => ({
-      ...provided,
-      color: '#718096',
-      '&:hover': {
-        color: '#4a5568'
-      }
-    })
-  }
 
   return (
     <>
@@ -187,23 +123,19 @@ const AddProduct = () => {
           <label className="block mb-2 font-medium text-primary dark:text-yellow-400">
             Danh mục:
           </label>
-          <Select
-            name="categoryId"
-            closeMenuOnSelect={false}
-            // defaultValue={colourOptions?.filter((option : any)  =>
-            //   initialValues?.categoryId?.includes(option.value)
-            // )}
-            isMulti
-            options={colourOptions}
-            value={selectedOptions}
-            onChange={handleSelectChange}
-            onBlur={handleBlur}
-            styles={dropdownStyles}
-            className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-border-primary"
-          />
-          {touched.categoryId && errors.categoryId ? (
-            <div>{errors.categoryId as any}</div>
-          ) : null}
+                            <select
+                    name="categoryId"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    // value={values?.categoryId}
+                    className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-border-primary"
+                  >
+                    <option value="">Chọn Danh Mục</option>
+                    {datacate?.map((data: any ,index: any)=>(
+                      <option value={data._id}>{data.name}</option>
+
+                    ))}
+                  </select>
         </div>
         <div>
           <input
