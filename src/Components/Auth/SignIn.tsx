@@ -107,15 +107,16 @@ const Signin = () => {
     const [loading] = useState(false)
     const [passViewState, setPassViewState] = useState(false)
     const [showForm, setShowForm] = useState(true)
-    const [showForgotPassword, setShowForgotPassword] = useState(false)
+    console.log(showForm)
+    // const [showForgotPassword, setShowForgotPassword] = useState(false)
     // const { setIsLogined } = useContext<ContextAuth>(ContextMain)
     const togglePassState: MouseEventHandler<HTMLButtonElement> = (e) => {
       e.preventDefault()
       setPassViewState((prevState) => !prevState)
     }
-    const toggoleShowForgot = () => {
-      setShowForgotPassword(true)
-    }
+    // const toggoleShowForgot = () => {
+    //   setShowForgotPassword(true)
+    // }
   
     // const onSuccessSign = (response : any) => {
     // //   setIsLogined(true)

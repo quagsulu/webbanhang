@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useMutation, useQuery } from 'react-query';
 import { getDetailProduct, updateProduct } from '../../api/Product';
-import { Navigate, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 // import { IProduct } from '../interface/User';
 import { toast } from 'react-toastify'
 import Joi from 'joi';
@@ -10,8 +10,10 @@ import { useFormik } from 'formik';
 
 const UpdateProduct = () => {
   const [fileValue, setFileValue] = useState<File | null>(null)
+  console.log(fileValue)
   const { id } = useParams()
-  const [value, setvalue] = useState({})
+  // const [value, setvalue] = useState({})
+  // console.log(setvalue)
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ['PRODUCT', id],
@@ -80,7 +82,7 @@ console.log('data', data)
     }),
     onSubmit: (values) => {
         console.log('Form data:', values);
-      mutationproduct.mutate(value)
+      mutationproduct.mutate(values)
 
         // formik.resetForm();
     },

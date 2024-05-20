@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { useMutation } from 'react-query'
-import { Link, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 import { register } from '../../api/User'
 // import { User } from '../../interface/User'
 import { toast } from 'react-toastify'
@@ -13,6 +13,7 @@ const Signup = () => {
     const [loading] = useState(false)
     const [passViewState, setPassViewState] = useState(false)
     const [showForm, setShowForm] = useState(true)
+    console.log(showForm)
     const [files] = useState<File[]>([])
     const handleShowForm = () => {
         setShowForm((prevShowForm) => !prevShowForm) // Cập nhật trạng thái để ẩn/hiển thị form

@@ -1,6 +1,6 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext } from 'react'
 import { useMutation, useQueryClient, useQuery } from 'react-query'
-import { toast } from 'react-toastify'
+// import { toast } from 'react-toastify'
 import { deleteProduct, getAllProduct, getDetailProduct } from '../api/Product'
 // import { IProduct, User } from '../interface/User'
 import { deleteUser, getAllUser, getUserDetail } from '../api/User'

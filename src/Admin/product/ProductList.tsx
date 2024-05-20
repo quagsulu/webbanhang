@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import  {useContext} from 'react'
 import {Link} from 'react-router-dom'
 import { ProductShopContext } from '../../Context/Context'
 const ListProduct = () => {
@@ -43,7 +43,7 @@ const ListProduct = () => {
       <tbody>
 
       {products?.map((p:any, index :number) =>(
-        <tr >
+        <tr key={index}>
           <td>{p.id}</td>
           <td>{p.name}</td>
           <td><img src={p.img}  alt=""/></td>

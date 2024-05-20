@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { useEffect, useState } from 'react'
+import  { useContext } from "react";
+// import { useEffect, useState } from 'react'
 import { ProductShopContext } from "../Context/Context";
 import { Link } from "react-router-dom";
 

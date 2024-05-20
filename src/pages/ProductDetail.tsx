@@ -1,6 +1,6 @@
-import { useContext } from 'react'
+// import { useContext } from 'react'
 import './css/ProductDetail.css'
-import { ProductShopContext } from '../Context/Context';
+// import { ProductShopContext } from '../Context/Context';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { getDetailProduct } from '../api/Product';

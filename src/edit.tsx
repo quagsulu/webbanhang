@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import {useEffect, useState} from 'react'
 import {useMutation} from 'react-query'
 import axios from 'axios'
 
@@ -66,7 +66,7 @@ const Update = () => {
     const onSubmit = (e:any) =>{
         e.preventDefault()
      const res = mutationAccount.mutate(inputValue)
-    //    console.log(res);
+       console.log(res);
        
     }
 

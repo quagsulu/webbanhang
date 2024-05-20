@@ -1,5 +1,5 @@
 // import { IProduct } from "../interface/User"
-import { Category, IProduct } from "../interface/Type"
+import { Category } from "../interface/Type"
 import Instance from "./Instance"
 
 export const getAllCategory = async () =>{
