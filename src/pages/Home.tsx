@@ -6,14 +6,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
     const {products: data} = useContext(ProductShopContext)
     console.log('data :',data)
-//   const [products, setproducts] = useState<any>([]);
 
-//     useEffect(() => {
-//         fetch(`http://localhost:3000/products`)
-//           .then((Response) => Response.json())
-//           .then((data: any) => setproducts(data))
-//       },[])
-//     console.log('product',products)
   return (
     <>
             <div id="banner">
@@ -79,10 +72,6 @@ const Home = () => {
                                 </div>
 
 ))}
-
-
-
-
                 </div>
                 <div className="list-page">
                     <div className="item">

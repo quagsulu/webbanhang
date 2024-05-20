@@ -69,8 +69,8 @@ const ProductDetail = () => {
 
         <h3 className="related-foods-title">Comments <br /><hr /></h3>
         <div className="containercomments justify-content-center mt-5 border-left border-right">
-          <div className="d-flex justify-content-center pt-3 pb-2"> <input type="text" name="text" placeholder="+ Add a note" 
-className="form-control addtxt" /> 
+          <div className="d-flex justify-content-center pt-3 pb-2"> <input type="text" name="text" placeholder="+ Add a note" className="form-control addtxt" />
+ 
           </div>
 
           <div className="d-flex justify-content-center py-2 w100">

@@ -3,8 +3,8 @@ import  { ChangeEventHandler, useContext, useState } from 'react'
 import { useMutation } from 'react-query';
 import { CreateProduct } from '../../api/Product';
 import { useFormik } from 'formik';
-import Joi from 'joi';
-import Select from 'react-select'
+// import Joi from 'joi';
+// import Select from 'react-select'
 import { ProductShopContext } from '../../Context/Context';
 import { toast } from 'react-toastify';
 const AddProduct = () => {
@@ -70,7 +70,7 @@ const AddProduct = () => {
         data.set('categoryId', JSON.stringify(values?.categoryId));
         console.log(data)
         console.log(values)
-        // await mutate(data);
+        await mutate(data);
         resetForm();
         
       } catch (error) {
@@ -127,11 +127,11 @@ const AddProduct = () => {
                     name="categoryId"
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    // value={values?.categoryId}
+                    value={values?.categoryId}
                     className="w-full rounded-lg border-[1.5px] border-stroke bg-transparent py-3 px-5 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-border-primary"
                   >
                     <option value="">Chọn Danh Mục</option>
-                    {datacate?.map((data: any ,index: any)=>(
+                    {datacate?.map((data: any )=>(
                       <option value={data._id}>{data.name}</option>
 
                     ))}

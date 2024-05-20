@@ -1,0 +1,68 @@
+.signup-form2 {
+    max-width: 400px; /* Đặt độ rộng tối đa của form */
+    margin: 0 auto; /* Căn giữa form */
+    background-color: #fff; /* Màu nền của form */
+    padding: 20px; /* Khoảng cách giữa các phần tử bên trong form */
+    border-radius: 10px; /* Bo tròn viền của form */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+  }
+  
+  .signup-form-heading {
+    text-align: center; /* Căn giữa tiêu đề */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+  }
+  
+  .signup-form-heading-text {
+    font-size: 1.5rem; /* Cỡ chữ của tiêu đề */
+    color: #333; /* Màu chữ của tiêu đề */
+  }
+  
+  .btn-form-exit {
+    background: none; /* Loại bỏ nền của nút */
+    border: none; /* Loại bỏ viền của nút */
+    cursor: pointer; /* Chỉ định kiểu con trỏ khi di chuyển qua nút */
+  }
+  
+  .signup-form-category {
+    margin-bottom: 15px; /* Khoảng cách giữa các category */
+  }
+  
+  .signup-form-category label {
+    font-weight: bold; /* Đặt đậm chữ cho nhãn */
+  }
+  
+  .signup-form-category input {
+    width: 100%; /* Chiều rộng của input */
+    padding: 10px; /* Khoảng cách nội dung trong input */
+    border-radius: 5px; /* Bo tròn viền của input */
+    border: 1px solid #ccc; /* Viền của input */
+  }
+  
+  .signup-form-category input:focus {
+    outline: none; /* Loại bỏ đường viền khi focus */
+    border-color: #eb3656; /* Thay đổi màu viền khi focus */
+  }
+  
+  .btn-reg {
+    width: 100%; /* Chiều rộng của nút */
+    padding: 10px; /* Khoảng cách nội dung trong nút */
+    border: none; /* Loại bỏ viền của nút */
+    border-radius: 5px; /* Bo tròn viền của nút */
+    background-color: #eb3656; /* Màu nền của nút */
+    color: #fff; /* Màu chữ của nút */
+    font-weight: bold; /* Đặt đậm chữ cho nút */
+    cursor: pointer; /* Chỉ định kiểu con trỏ khi di chuyển qua nút */
+  }
+  
+  .btn-reg:disabled {
+    opacity: 0.5; /* Điều chỉnh độ mờ khi nút bị vô hiệu hóa */
+    cursor: not-allowed; /* Chỉ định kiểu con trỏ khi nút bị vô hiệu hóa */
+  }
+  
+  .hide-scroll-bar {
+    overflow-y: auto; /* Kích hoạt thanh cuộn theo chiều dọc */
+    max-height: 400px; /* Đặt chiều cao tối đa của phần tử để kích hoạt thanh cuộn */
+  }
+  
+  /* Thêm các hiệu ứng khác theo nhu cầu của bạn */
+  
