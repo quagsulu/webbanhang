@@ -21,6 +21,5 @@ export const CreateProduct = async(product : IProduct) =>{
 }
 export const updateProduct = async(product : IProduct) =>{
     const result = await Instance.patch('/product/' + product._id,product)
-
     return result.data
 }
