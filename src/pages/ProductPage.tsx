@@ -23,9 +23,9 @@ const ProductPage = () => {
             <div className="product-box">
                 <div id="wp-products">
                     <ul id="list-products">
-                        {data.map((p : any, index : any) => (
+                        {data?.map((p : any, index : any) => (
                             <li className="item" key={index}>
-                                <img src={p.img} alt={p.name} className="product-image" />
+                                <img src={p.image} alt={p.name} className="product-image" />
                                 <div className="stars">
                                     <span>
                                         <img src="https://i.imgur.com/jL2JTRw.png" alt="Star" />
@@ -44,7 +44,7 @@ const ProductPage = () => {
                                     </span>
                                 </div>
                                 <div className="name">{p.name}</div>
-                                <div className="desc">{p.desc}</div>
+                                {/* <div className="desc">{p.desc}</div> */}
                                 <div className="price">{p.price} VNĐ</div>
                             </li>
                         ))}

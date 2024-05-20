@@ -3,7 +3,9 @@ import React from 'react';
 import './css/Profile.css'
 function ProfilePage() {
 
-
+let a = '1'
+ a = '2'
+console.log(a)
   return (
     <div className="container">
       <div className="profile-card">

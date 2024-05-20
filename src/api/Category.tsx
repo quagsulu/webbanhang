@@ -2,18 +2,23 @@
 import { Category, IProduct } from "../interface/Type"
 import Instance from "./Instance"
 
-export const getAllCategory = () =>{
-    return Instance.get('/category')
+export const getAllCategory = async () =>{
+    const data = await Instance.get('/category')
+     return data.data
 }
-export const deleteCategory = (id:any | string) =>{
-    return Instance.delete('/category/' +id)
+export const deleteCategory = async(id:any | string) =>{
+    const data = await Instance.delete('/category/' +id)
+     return data.data
 }
-export const getDetailCategory = (id: any | string) =>{
-    return Instance.get('/category/' + id)
+export const getDetailCategory = async(id: any | string) =>{
+    const data = await Instance.get('/category/' + id)
+     return data.data
 }
-export const CreateCategory = (product : Category) =>{
-    return Instance.post('/category/', product)
+export const CreateCategory = async(product : Category) =>{
+    const data = await Instance.post('/category/', product)
+     return data.data
 }
-export const updateCategory = (product : Category) =>{
-    return Instance.patch('/category/' + product.id,product)
+export const updateCategory = async (product : Category) =>{
+    const data = await Instance.patch('/category/' + product.id,product)
+     return data.data
 }

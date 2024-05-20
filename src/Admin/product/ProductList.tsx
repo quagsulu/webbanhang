@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import {Link} from 'react-router-dom'
-import { ProductShopContext } from '../Context/Context'
+import { ProductShopContext } from '../../Context/Context'
 const ListProduct = () => {
 
   const {products, isError, isLoading, deleteprd} = useContext(ProductShopContext)

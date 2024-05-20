@@ -5,11 +5,12 @@ export interface User{
 }
 
 export interface IProduct{
-    id? : number | string,
+    _id? : number | string,
     name: string,
-    img: string
+    image: string
     price:number,
     desc : string,
+    categoryId: string[] | string
 }
 export interface Category{
     id? : number | string,

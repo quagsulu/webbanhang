@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useEffect, useState } from 'react'
 import { ProductShopContext } from "../Context/Context";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const {products: data} = useContext(ProductShopContext)
@@ -48,7 +49,10 @@ const Home = () => {
                 {data?.map((p:any, index :number) =>(
 
                                 <div className="item" key={index}>
-                                    <img src={p.img} alt="" />
+                                    <Link to={`/product/detail/${p._id}`}>
+
+                                    <img className="imgprd" src={p.image} alt="" />
+                                    </Link>
 
                                     <div className="stars">
                                         <span>
@@ -70,7 +74,7 @@ const Home = () => {
                                     </div>
 
                                     <div className="name" > {p.name} </div>
-                                    <div className="desc">{p.desc}</div>
+                                    {/* <div className="desc">{p.desc}</div> */}
                                     <div className="price">{p.price} VNĐ</div>
                                 </div>
 

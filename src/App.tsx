@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home'
-import AddProduct from './Admin/AddProduct'
+import AddProduct from './Admin/product/AddProduct'
 import User from './Admin/auth/User'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-import UpdateProduct from './Admin/UpdateProduct'
+import UpdateProduct from './Admin/product/UpdateProduct'
 import ProductPage from './pages/ProductPage'
 import ProductDetail from './pages/ProductDetail'
-import ListProduct from './Admin/ProductList'
+import ListProduct from './Admin/product/ProductList'
 import BaseLayout from './Layout/Base'
 import AdminLayout from './Layout/Admin'
 import Signin from './Components/Auth/SignIn'
@@ -30,7 +30,7 @@ function App() {
           <Route path='/bill' element={<BillPage />} />
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='product' element={<ProductPage />} />
-          <Route path='product/detail' element={<ProductDetail />} />
+          <Route path='product/detail/:id' element={<ProductDetail />} />
           <Route path='products/detail/:id' element={<ProductDetail />} />
           <Route path='signup' element={< Signup/>} />
           <Route path='signin' element={< Signin/>} />

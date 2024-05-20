@@ -4,17 +4,17 @@ import { User } from '../interface/Type'
 // import { User } from '../interface/User'
 
 export const register = (user: User) =>{
-   return  Instance.post('/users/register', user)
+   return  Instance.post('/user/register', user)
 }
 export const login = (user: User) =>{
-   return  Instance.post('/users/login', user)
+   return  Instance.post('/user/login', user)
 }
 export const getAllUser = () =>{
-   return  Instance.get('/users')
+   return  Instance.get('/user')
 }
 export const deleteUser = (_id:number|string) =>{
-   return  Instance.delete(`/users/${_id}`)
+   return  Instance.delete(`/user/${_id}`)
 }
 export const getUserDetail = async (id:any) => {
-   return Instance.get('/users/'+id)
+   return Instance.get('/user/'+id)
  };
