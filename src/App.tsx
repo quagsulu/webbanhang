@@ -17,32 +17,51 @@ import ProfilePage from './pages/ProfilePage'
 import CartPage from './pages/Cart'
 import BillPage from './pages/Bill'
 import PurchaseHistory from './pages/PurchaseHistory'
+import { AuthProvider, AuthContext } from './Context/AuthContex'
+import { useContext } from 'react'
+import { ProductShopContext } from './Context/Context'
+// const PrivateRoute = ({ component: Component, ...rest }) => {
+//   const { isAuthenticated } = React.useContext(AuthContext);
+//   return (
+//     <Route
+//       {...rest}
+//       render={props =>
+//         isAuthenticated ? (
+//           <Component {...props} />
+//         ) : (
+//           <Redirect to="/login" />
+//         )
+//       }
+//     />
+//   );
+// };
 
 function App() {
-
+  // const { isAuthenticated } = useContext(AuthContext)
   return (
     <>
-      <Routes>
-        <Route path='/' element={<BaseLayout />}>
-          <Route path='' element={<Home />} />
-          <Route path='/cart' element={<CartPage />} />
-          <Route path='/p' element={<PurchaseHistory />} />
-          <Route path='/bill' element={<BillPage />} />
-          <Route path='/profile' element={<ProfilePage />} />
-          <Route path='product' element={<ProductPage />} />
-          <Route path='product/detail/:id' element={<ProductDetail />} />
-          <Route path='products/detail/:id' element={<ProductDetail />} />
-          <Route path='signup' element={< Signup/>} />
-          <Route path='signin' element={< Signin/>} />
-        </Route>
-        <Route path='/admin' element={<AdminLayout />}>
-          <Route path='product' element={<ListProduct />} />
-          <Route path='product/edit/:id' element={<UpdateProduct />} />
-          <Route path='product/add' element={<AddProduct />} />
-          <Route path='user' element={<User />} />
-        </Route>
-      </Routes>
-      <ToastContainer  />
+
+        <Routes>
+          <Route path='/' element={<BaseLayout />}>
+            <Route path='' element={<Home />} />
+            <Route path='/cart' element={<CartPage />} />
+            <Route path='/p' element={<PurchaseHistory />} />
+            <Route path='/bill' element={<BillPage />} />
+            <Route path='/profile' element={<ProfilePage />} />
+            <Route path='product' element={<ProductPage />} />
+            <Route path='product/detail/:id' element={<ProductDetail />} />
+            <Route path='products/detail/:id' element={<ProductDetail />} />
+            <Route path='signup' element={< Signup />} />
+            <Route path='signin' element={< Signin />} />
+          </Route>
+          <Route path='/admin' element={<AdminLayout />}>
+            <Route path='product' element={<ListProduct />} />
+            <Route path='product/edit/:id' element={<UpdateProduct />} />
+            <Route path='product/add' element={<AddProduct />} />
+            <Route path='user' element={<User />} />
+          </Route>
+        </Routes>
+        <ToastContainer />
     </>
 
 

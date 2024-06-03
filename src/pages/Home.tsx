@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
     const {products: data} = useContext(ProductShopContext)
-    console.log('data :',data)
+    // console.log('data :',data)
 
   return (
     <>

@@ -1,0 +1,77 @@
+.centersss{
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    
+
+}
+.centersss img{
+margin: auto;
+}
+.user-nav {
+    position: relative;
+  }
+  
+  .user-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .icon {
+    width: 40px; /* Điều chỉnh kích thước ảnh người dùng */
+    height: 40px;
+    border-radius: 50%; /* Làm tròn góc cho ảnh */
+    margin-right: 10px; /* Khoảng cách giữa ảnh và tên người dùng */
+  }
+  
+  .user-name {
+    font-size: 16px; /* Kích thước chữ cho tên người dùng */
+  }
+  
+  .user-dropdown {
+    width: 170px;
+    /* margin:  0 0 0 2220px; */
+    position: absolute;
+    top: 100%;
+    right: -50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 10px;
+  }
+  
+  .user-dropdown ul {
+    border-radius: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .user-dropdown li {
+    /* marg; */
+    /* padding: 10px; */
+  }
+  
+  .user-dropdown li a {
+    padding: 10px;
+    line-height:  18px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .user-dropdown li a:hover {
+    background-color: #f0f0f0;
+  }
+  .iconssss{
+    margin: auto;
+  }
+  .user-nav:hover .user-dropdown{
+    display: block;
+    z-index: 1;
+  }

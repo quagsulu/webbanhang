@@ -4,11 +4,11 @@ import Footer from '../pages/Footer'
 
 const BaseLayout = () => {
     return (
-        <div>
-            <Header/>
-                <Outlet />
-            <Footer/>
-        </div>
+        <>
+            <Header />
+            <Outlet />
+            <Footer />
+        </>
     )
 }
 

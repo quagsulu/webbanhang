@@ -18,7 +18,7 @@ const ProductContext = ({ children }: { children: React.ReactNode }) => {
         queryFn: async () => {
             try {
                 const { data } = await getAllProduct()
-                console.log("data", data);
+                // console.log("data", data);
                 return data as IProduct[]
 
             } catch (error) {
@@ -27,26 +27,26 @@ const ProductContext = ({ children }: { children: React.ReactNode }) => {
             }
         }
     })
-    const { data: ProductDetail } = useQuery({
-        queryKey: ['PRODUCTDETAIL'],
-        queryFn: async (id: any) => {
-            try {
-                const { data } = await getDetailProduct(id)
-                console.log("data", data);
-                return data as IProduct[]
+    // const { data: ProductDetail } = useQuery({
+    //     queryKey: ['PRODUCTDETAIL'],
+    //     queryFn: async (id: any) => {
+    //         try {
+    //             const { data } = await getDetailProduct(id)
+    //             // console.log("data", data);
+    //             return data as IProduct[]
 
-            } catch (error) {
-                console.error('Error fetching products:', error);
-                throw error;
-            }
-        }
-    })
+    //         } catch (error) {
+    //             console.error('Error fetching products:', error);
+    //             throw error;
+    //         }
+    //     }
+    // })
     const { data: category, isLoading: isLoadingcate, isError: isErrorcate } = useQuery({
         queryKey: ['CATEGORY'],
         queryFn: async () => {
             try {
                 const { data } = await getAllCategory()
-                console.log("data", data);
+                // console.log("data", data);
                 return data as Category[]
 
             } catch (error) {
@@ -60,7 +60,7 @@ const ProductContext = ({ children }: { children: React.ReactNode }) => {
         queryFn: async () => {
             try {
                 const { data } = await getAllUser()
-                console.log("data", data);
+                // console.log("data", data);
                 return data as User[]
 
             } catch (error) {
@@ -69,20 +69,23 @@ const ProductContext = ({ children }: { children: React.ReactNode }) => {
             }
         }
     })
-    const { data: getUsesrDetail } = useQuery({
-        queryKey: ['USERDETAIL'],
-        queryFn: async (id: any) => {
-            try {
-                const { data } = await getUserDetail(id)
-                console.log("data", data);
-                return data as User[]
+    // const { data: getUsesrDetail } = useQuery({
+    //     queryKey: ['USERDETAIL'],
+    //     queryFn: async (id: any) => {
+    //         if (id) {
 
-            } catch (error) {
-                console.error('Error fetching products:', error);
-                throw error;
-            }
-        }
-    })
+    //             try {
+    //                 const { data } = await getUserDetail(id)
+    //                 console.log("data", data);
+    //                 return data as User[]
+                    
+    //             } catch (error) {
+    //                 console.error('Error fetching products:', error);
+    //                 throw error;
+    //             }
+    //         }
+    //     }
+    // })
 
     const deleteuser = useMutation({
         mutationFn: (_id: any) => deleteUser(_id),
@@ -117,7 +120,7 @@ const ProductContext = ({ children }: { children: React.ReactNode }) => {
 
     const ContextValue = {
         products, category, user,
-        ProductDetail, getUsesrDetail,
+        // ProductDetail, getUsesrDetail,
         isError, isErrorcate,
         isLoading, isLoadingcate,
         deleteprd, deleteuser, deleteCate

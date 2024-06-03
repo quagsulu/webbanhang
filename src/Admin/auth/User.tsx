@@ -43,9 +43,6 @@ const User = () => {
    
         </tr>
           ))}
-
-
-
       </tbody>
     </table>
   </div>
